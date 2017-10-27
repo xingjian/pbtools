@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+	<w:body>
+		<w:p w:rsidR="00494C20" w:rsidRDefault="00494C20" w:rsidP="00494C20">
+			<w:pPr>
+				<w:pStyle w:val="1"/>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="宋体" w:hAnsi="宋体"/>
+					<w:sz w:val="52"/>
+					<w:szCs w:val="52"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="00494C20">
+				<w:rPr>
+					<w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:hint="eastAsia"/>
+					<w:sz w:val="52"/>
+					<w:szCs w:val="52"/>
+				</w:rPr>
+				<w:t>数据库数据结构设计表</w:t>
+			</w:r>
+		</w:p>
+		<w:p w:rsidR="0012743D" w:rsidRDefault="0012743D" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="0012743D" w:rsidRDefault="0012743D" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="0012743D" w:rsidRDefault="0012743D" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="0012743D" w:rsidRDefault="0012743D" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="0012743D" w:rsidRPr="0012743D" w:rsidRDefault="0012743D" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="00494C20" w:rsidRDefault="00494C20" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="000B52CA" w:rsidRPr="00494C20" w:rsidRDefault="000B52CA" w:rsidP="0012743D">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+		</w:p>
+		<w:tbl>
+			<w:tblPr>
+				<w:tblW w:w="8472" w:type="dxa"/>
+				<w:tblBorders>
+					<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+					<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+					<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+					<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+					<w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+					<w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+				</w:tblBorders>
+				<w:tblLayout w:type="fixed"/>
+				<w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+			</w:tblPr>
+			<w:tblGrid>
+				<w:gridCol w:w="4620"/>
+				<w:gridCol w:w="3852"/>
+			</w:tblGrid>
+			<w:tr w:rsidR="00494C20" w:rsidRPr="00DD5173" w:rsidTr="00A366DA">
+				<w:trPr>
+					<w:cantSplit/>
+					<w:trHeight w:val="135"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="8472" w:type="dxa"/>
+						<w:gridSpan w:val="2"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00494C20" w:rsidP="00494C20">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>项目名称：</w:t>
+						</w:r>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t xml:space="preserve"> </w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${projectname}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr w:rsidR="00494C20" w:rsidRPr="00DD5173" w:rsidTr="00A366DA">
+				<w:trPr>
+					<w:cantSplit/>
+					<w:trHeight w:val="311"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="4620" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00494C20" w:rsidP="00223DA0">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>文档类型：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${fileType}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="3852" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00B031CB">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>密级：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${level}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr w:rsidR="00494C20" w:rsidRPr="00DD5173" w:rsidTr="00A366DA">
+				<w:trPr>
+					<w:cantSplit/>
+					<w:trHeight w:val="311"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="4620" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00494C20" w:rsidP="00A366DA">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>拟制：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${authuser}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="3852" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00494C20" w:rsidP="00B031CB">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>审核：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${checkuser}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr w:rsidR="00494C20" w:rsidRPr="00DD5173" w:rsidTr="00A366DA">
+				<w:trPr>
+					<w:cantSplit/>
+					<w:trHeight w:val="311"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="4620" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00223DA0">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>版本</w:t>
+						</w:r>
+						<w:r w:rsidR="00494C20" w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${version}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="3852" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00223DA0">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>日期</w:t>
+						</w:r>
+						<w:r w:rsidR="00494C20" w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${date}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr w:rsidR="00494C20" w:rsidRPr="00DD5173" w:rsidTr="00A366DA">
+				<w:trPr>
+					<w:cantSplit/>
+					<w:trHeight w:val="311"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="4620" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00B031CB">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>数据库名称</w:t>
+						</w:r>
+						<w:r w:rsidR="00494C20" w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${databasename}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="3852" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00494C20" w:rsidRPr="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00B031CB">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>IP地址</w:t>
+						</w:r>
+						<w:r w:rsidR="00494C20" w:rsidRPr="00223DA0">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${ip}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr w:rsidR="00223DA0" w:rsidRPr="00DD5173" w:rsidTr="00A366DA">
+				<w:trPr>
+					<w:cantSplit/>
+					<w:trHeight w:val="311"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="4620" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00B031CB">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>用户名：</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${user}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="3852" w:type="dxa"/>
+						<w:vAlign w:val="center"/>
+					</w:tcPr>
+					<w:p w:rsidR="00223DA0" w:rsidRDefault="00223DA0" w:rsidP="00B031CB">
+						<w:pPr>
+							<w:spacing w:before="120" w:after="120"/>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>密码:</w:t>
+						</w:r>
+						<w:r w:rsidR="00161E52">
+							<w:rPr>
+								<w:rFonts w:asciiTheme="minorEastAsia" w:hAnsiTheme="minorEastAsia" w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="28"/>
+								<w:szCs w:val="28"/>
+							</w:rPr>
+							<w:t>${password}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+		</w:tbl>
+		<w:p w:rsidR="00715E34" w:rsidRDefault="00715E34" w:rsidP="00494C20">
+			<w:r>
+				<w:br w:type="page"/>
+			</w:r>
+		</w:p>
+		<w:p w:rsidR="00494C20" w:rsidRDefault="00AB48FE" w:rsidP="00AB48FE">
+			<w:pPr>
+				<w:pStyle w:val="2"/>
+				<w:numPr>
+					<w:ilvl w:val="0"/>
+					<w:numId w:val="1"/>
+				</w:numPr>
+				<w:rPr>
+					<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="005259D4">
+				<w:rPr>
+					<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+				</w:rPr>
+				<w:lastRenderedPageBreak/>
+				<w:t>数据库实体表</w:t>
+			</w:r>
+		</w:p>
+		<#list tables as table>
+<w:p w:rsidR="00EE7FD3" w:rsidRPr="005A1B69" w:rsidRDefault="00283EB7" w:rsidP="00FE0CAA">
+			<w:pPr>
+				<w:pStyle w:val="3"/>
+				<w:numPr>
+					<w:ilvl w:val="0"/>
+					<w:numId w:val="5"/>
+				</w:numPr>
+			</w:pPr>
+			<w:r w:rsidRPr="005A1B69">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>表名：</w:t>
+			</w:r>
+			<w:r w:rsidR="00161E52">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>${table.tableName}</w:t>
+			</w:r>
+			<w:r w:rsidR="007416B8" w:rsidRPr="005A1B69">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r w:rsidR="007416B8" w:rsidRPr="005A1B69">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>备注</w:t>
+			</w:r>
+			<w:r w:rsidR="007416B8" w:rsidRPr="005A1B69">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>:</w:t>
+			</w:r>
+			<w:r w:rsidR="002C690B" w:rsidRPr="005A1B69">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>(</w:t>
+			</w:r>
+			<w:r w:rsidR="00161E52">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>${table.comment}</w:t>
+			</w:r>
+			<w:r w:rsidR="002C690B" w:rsidRPr="005A1B69">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia"/>
+				</w:rPr>
+				<w:t>)</w:t>
+			</w:r>
+		</w:p>
+		<w:tbl>
+			<w:tblPr>
+				<w:tblStyle w:val="a6"/>
+				<w:tblW w:w="9484" w:type="dxa"/>
+				<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+			</w:tblPr>
+			<w:tblGrid>
+				<w:gridCol w:w="675"/>
+				<w:gridCol w:w="2268"/>
+				<w:gridCol w:w="2410"/>
+				<w:gridCol w:w="1418"/>
+				<w:gridCol w:w="708"/>
+				<w:gridCol w:w="851"/>
+				<w:gridCol w:w="1154"/>
+			</w:tblGrid>
+			<w:tr w:rsidR="00EE7FD3" w:rsidTr="006C12FF">
+				<w:trPr>
+					<w:trHeight w:val="694"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="675" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>序号</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2268" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>字段名</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2410" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>字段注释</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1418" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>字段类型</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="708" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>主键</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="851" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>为空</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1154" w:type="dxa"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9" w:themeFill="background1" w:themeFillShade="D9"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00F92920" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r w:rsidRPr="00F92920">
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>备注</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<#assign var = 0>
+			<#list table.columns as column>
+				
+			<w:tr w:rsidR="006C12FF" w:rsidTr="006C12FF">
+				<w:trPr>
+					<w:trHeight w:val="406"/>
+				</w:trPr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="675" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00283EB7" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column_index+1}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2268" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="008867E8" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column.name}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2410" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="008867E8" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column.comment}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1418" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="008867E8" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column.type}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="708" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="008867E8" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column.ispk}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="851" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="008867E8" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column.isnull}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1154" w:type="dxa"/>
+					</w:tcPr>
+					<w:p w:rsidR="00F92920" w:rsidRPr="00F92920" w:rsidRDefault="00B614C1" w:rsidP="00F92920">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑"/>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="微软雅黑" w:eastAsia="微软雅黑" w:hAnsi="微软雅黑" w:hint="eastAsia"/>
+								<w:b/>
+							</w:rPr>
+							<w:t>${column.remark}</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			</#list>
+		</w:tbl>
+		</#list>
+		
+		
+		
+		
+		<w:p w:rsidR="00DE0C1B" w:rsidRPr="00F83973" w:rsidRDefault="00DE0C1B" w:rsidP="00DE0C1B"/>
+		<w:p w:rsidR="00FE0CAA" w:rsidRPr="00F83973" w:rsidRDefault="00FE0CAA" w:rsidP="00FE0CAA"/>
+		<w:p w:rsidR="00F83973" w:rsidRPr="00F83973" w:rsidRDefault="00F83973" w:rsidP="00F83973"/>
+		<w:sectPr w:rsidR="00F83973" w:rsidRPr="00F83973">
+			<w:headerReference w:type="default" r:id="rId9"/>
+			<w:footerReference w:type="default" r:id="rId10"/>
+			<w:pgSz w:w="11906" w:h="16838"/>
+			<w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
+			<w:cols w:space="425"/>
+			<w:docGrid w:type="lines" w:linePitch="312"/>
+		</w:sectPr>
+	</w:body>
+</w:document>
