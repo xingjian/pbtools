@@ -1,0 +1,74 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+version=0.1
+
+repositories {
+	mavenLocal()
+    jcenter()
+}
+
+ext{
+	slf4jVersion = "1.7.25"
+	log4jVersion = "1.2.17"
+	junitVersion = '4.12'
+	oracleConnectorVersion = '10.2.0.4.0'
+	springVersion = "4.3.9.RELEASE"
+	druidVersion = '1.1.1'
+	mainClassName = 'com.promisepb.tools.dataexport.main.DataExportMain'
+}
+
+dependencies {
+	compile "log4j:log4j:$log4jVersion"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+    compile "org.springframework:spring-core:$springVersion"
+	compile "org.springframework:spring-context:$springVersion"
+	compile "org.springframework:spring-jdbc:$springVersion"
+	compile "org.quartz-scheduler:quartz:2.2.2"
+	compile "com.alibaba:druid:$druidVersion"
+	compile "org.springframework:spring-context-support:$springVersion"
+	compile "ch.qos.logback:logback-classic:1.1.2"
+	compile "ch.qos.logback:logback-core:1.1.2"
+	compile "com.promisepb.utils:com.promisepb.utils.fileutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.poiutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.emailutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.dbutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.stringutils:0.1"
+	compile "com.oracle:ojdbc14:$oracleConnectorVersion"
+    testCompile "junit:junit:$junitVersion"
+    
+}
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
+
+task createJavaProject  {
+	doLast {
+		sourceSets*.java.srcDirs*.each{ it.mkdirs() }
+		sourceSets*.resources.srcDirs*.each{ it.mkdirs()}
+	}
+}
+
+//上传jar到本地maven库
+apply plugin: 'maven'
+group = 'com.promisepb.utils'
+uploadArchives {
+ repositories {
+     mavenDeployer {
+         repository(url: uri('F:\\mavenrepo\\repository'))
+     }
+ }
+}
+
+jar.manifest.attributes 'Main-Class': mainClassName  
+jar.baseName = project.name
+  
+jar {  
+    from {  
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }  
+        configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }  
+    }  
+    exclude('LICENSE.txt', 'NOTICE.txt', 'rootdoc.txt')  
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'  
+    exclude 'META-INF/NOTICE', 'META-INF/NOTICE.txt'  
+    exclude 'META-INF/LICENSE', 'META-INF/LICENSE.txt'  
+    exclude 'META-INF/DEPENDENCIES'  
+}  
