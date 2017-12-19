@@ -77,6 +77,7 @@ public class DBToolsExportDBFileMain {
             	 List<ColumnDesc> result = PBDBUtil.GetTableStructure(connection, viewname.replace(":", ""));
             	 tables.add(viewname);
             }catch(Exception e) {
+            	logger.info(e.getMessage());
             	logger.info("获取表："+viewname+"信息有误！");
             }
         }

@@ -93,7 +93,7 @@ public class DBTools {
             Process("/","document.flt",args,writer);
             //合并并输出
             String toWordFilePath = wordPath+File.separator+"数据库结构设计文档"+PBStringUtil.GetDateString("yyyyMMddHHmmss",null)+".docx";
-            ExportDocx(wordPath+File.separator+"documentTemplateTemp.xml",DBTools.class.getResource("/").getPath()+"table_template.docx",toWordFilePath);
+            ExportDocx(wordPath+File.separator+"documentTemplateTemp.xml",args.get("template").toString(),toWordFilePath);
             PBFileUtil.deleteFile(wordPath+File.separator+"documentTemplateTemp.xml");
             logger.info("成功导出数据库设计文件！");
         } catch (Exception e) {
