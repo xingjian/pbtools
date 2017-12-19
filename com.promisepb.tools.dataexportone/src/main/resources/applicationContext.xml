@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+     http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+     
+     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config-park-etcp.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 数据库参数配置 -->
+	<bean id="dataSourceConfig1"  class="com.promisepb.tools.dataexportone.vo.DataSourceConfig" >
+     			<property name="jdbcURL"  value="${jdbc.url}" />
+     			<property name="userName"  value="${jdbc.username}" />
+     			<property name="passwd"  value="${jdbc.password}" />
+     			<property name="dbType"  value="oracle" />
+     </bean>
+     <!-- 邮箱参数配置 -->
+     <bean id="emailConfig1" class="com.promisepb.tools.dataexportone.vo.EmailConfig" init-method="initEmailConfig">
+     			<property name="fromUserConfig"  value="${em.email.fromUserConfig}" />
+     			<property name="toUserConfig"  value="${em.email.toUserConfig}" />
+     			<property name="ccUserConfig"  value="${em.email.ccUserConfig}" />
+     			<property name="errorUserConfig"  value="${em.email.errorUserConfig}" />
+     </bean>
+	<bean id="dataExportOneService" class="com.promisepb.tools.dataexportone.service.impl.DataExportOneServiceImpl"  init-method="exportDataFile">
+		<property name="dsc"  ref="dataSourceConfig1"/>
+     	<property name="ec"  ref="emailConfig1"/>
+     	<property name="sql"  value="${sql}" />
+     	<property name="exportPath"  value="${dataFilePath}" />
+     	<property name="emailContent"  value="${em.email.content}" />
+     	<property name="emailTitle"  value="${em.email.title}" />
+     	<property name="suffixContent"  value="${exportSuffix}" />
+     	<property name="startTime"  value="${d1}" />
+     	<property name="endTime"  value="${d2}" />
+     	<property name="pageSize"  value="${pageSize}" />
+     	<property name="dayStep"   value="${dayStep}" />
+	</bean>
+</beans>
