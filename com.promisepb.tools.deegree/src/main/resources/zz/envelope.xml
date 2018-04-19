@@ -1,0 +1,6 @@
+    <gml:boundedBy>
+        <gml:Envelope srsName="epsg:900913" srsDimension="2">
+            <gml:lowerCorner>383917.94 203998.390000001</gml:lowerCorner>
+            <gml:upperCorner>615485.41 434285.550000001</gml:upperCorner>
+        </gml:Envelope>
+    </gml:boundedBy>

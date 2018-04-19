@@ -1,0 +1,13 @@
+<gml:featureMember>
+    <fme:tx gml:id="id${id}">
+    <fme:id>${id}</fme:id>
+    <fme:positionti>${time}</fme:positionti>
+	<fme:mzl>${mzl}</fme:mzl>
+	<fme:speed>${speed}</fme:speed>
+    <gml:pointProperty>
+    <gml:Point srsName="epsg:900913" srsDimension="2">
+    <gml:pos>${x} ${y}</gml:pos>
+    </gml:Point>
+    </gml:pointProperty>
+    </fme:tx>
+</gml:featureMember>

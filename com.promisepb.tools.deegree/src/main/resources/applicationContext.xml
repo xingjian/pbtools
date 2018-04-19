@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+     http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+     
+     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config-deegree.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 数据库参数配置 -->
+	<bean id="dataSourceConfig"  class="com.promisepb.tools.deegree.vo.DataSourceConfig" >
+     			<property name="jdbcURL"  value="${jdbc.url}" />
+     			<property name="userName"  value="${jdbc.username}" />
+     			<property name="passwd"  value="${jdbc.password}" />
+     			<property name="dbType"  value="oracle" />
+     </bean>
+     <bean id="createZZGMLService" class="com.promisepb.tools.deegree.service.impl.CreateZZGMLServiceImpl" init-method="createGMLFile">
+     			<property name="dsc" ref="dataSourceConfig" />
+     			<property name="toFilePath" value="${toFilePath}" />
+     			<property name="sql" value="${sql}" />
+     			<property name="contentXML" value="${contentXML}" />
+     			<property name="headerXML" value="${headerXML}" />
+     			<property name="envelopeXML" value="${envelopeXML}" />
+     </bean>
+</beans>

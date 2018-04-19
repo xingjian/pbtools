@@ -1,0 +1,59 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+version=0.1
+
+repositories {
+	mavenLocal()
+    jcenter()
+}
+
+ext{
+	slf4jVersion = "1.7.25"
+	log4jVersion = "1.2.17"
+	junitVersion = "4.12"
+	oracleConnectorVersion = '10.2.0.4.0'
+	springVersion = "4.3.9.RELEASE"
+	mainClassName = 'com.promisepb.tools.deegree.main.CreateGMLMain'
+}
+
+dependencies {
+	compile "log4j:log4j:$log4jVersion"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+    compile "org.springframework:spring-core:$springVersion"
+	compile "org.springframework:spring-context:$springVersion"
+	compile "org.springframework:spring-jdbc:$springVersion"
+	compile "org.springframework:spring-context-support:$springVersion"
+    compile "com.promisepb.utils:com.promisepb.utils.poiutils:0.1"
+    compile "com.promisepb.utils:com.promisepb.utils.fileutils:0.1"
+    compile "com.promisepb.utils:com.promisepb.utils.mathutils:0.1"
+    compile "com.oracle:ojdbc14:$oracleConnectorVersion"
+    compile "org.apache.poi:ooxml-schemas:1.3"
+	testCompile "ch.qos.logback:logback-classic:1.1.2"
+	testCompile "ch.qos.logback:logback-core:1.1.2"
+    testCompile "junit:junit:$junitVersion"
+}
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
+
+task createJavaProject  {
+	doLast {
+		sourceSets*.java.srcDirs*.each{ it.mkdirs() }
+		sourceSets*.resources.srcDirs*.each{ it.mkdirs()}
+	}
+}
+
+task copyJars(type:Copy) {
+  from configurations.runtime
+  into 'dist' // 目标位置
+}
+
+//上传jar到本地maven库
+apply plugin: 'maven'
+group = 'com.promisepb.tools'
+uploadArchives {
+ repositories {
+     mavenDeployer {
+         repository(url: uri('E:\\mavenrepo\\repository'))
+     }
+ }
+}
