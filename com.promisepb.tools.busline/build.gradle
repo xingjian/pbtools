@@ -1,0 +1,70 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+version=0.1
+sourceCompatibility = 1.8 
+targetCompatibility = 1.8  
+
+repositories {
+	mavenLocal()
+    jcenter()
+}
+
+ext{
+	slf4jVersion = "1.7.25"
+	log4jVersion = "1.2.17"
+	junitVersion = "4.12"
+	springVersion = "4.3.9.RELEASE"
+	mainClassName = 'com.promisepb.tools.busline.main.BusLineMain'
+}
+
+dependencies {
+	compile "log4j:log4j:$log4jVersion"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+	compile "com.promisepb.utils:com.promisepb.utils.httputils:0.1"
+	compile "log4j:log4j:$log4jVersion"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+	compile "ch.qos.logback:logback-classic:1.1.2"
+	compile "ch.qos.logback:logback-core:1.1.2"
+	compile "org.springframework:spring-core:$springVersion"
+	compile "org.springframework:spring-context:$springVersion"
+	compile "org.springframework:spring-jdbc:$springVersion"
+	compile "org.springframework:spring-context-support:$springVersion"
+	compile "com.promisepb.utils:com.promisepb.utils.fileutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.poiutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.emailutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.dbutils:0.1"
+	compile "com.promisepb.utils:com.promisepb.utils.stringutils:0.1"
+	compile "org.jsoup:jsoup:1.11.2"
+    testCompile "junit:junit:$junitVersion"
+    
+}
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
+
+task createJavaProject  {
+	doLast {
+		sourceSets*.java.srcDirs*.each{ it.mkdirs() }
+		sourceSets*.resources.srcDirs*.each{ it.mkdirs()}
+	}
+}
+
+//上传jar到本地maven库
+apply plugin: 'maven'
+group = 'com.promisepb.tools'
+uploadArchives {
+ repositories {
+     mavenDeployer {
+         repository(url: uri('E:\\mavenrepo\\repository'))
+     }
+ }
+}
+
+task createJavadoc(type: Javadoc) {
+	classpath += sourceSets.main.compileClasspath
+	source = sourceSets.main.allJava
+	options.encoding "UTF-8"  
+    options.charSet 'UTF-8'  
+}
+  
+
