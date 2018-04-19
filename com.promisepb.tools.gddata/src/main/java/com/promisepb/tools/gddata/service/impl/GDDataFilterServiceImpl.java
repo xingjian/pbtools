@@ -58,52 +58,75 @@ public class GDDataFilterServiceImpl implements GDDataFilterService {
 			for (String roadidTemp : roadidArr) {
 				mapGD.put(roadidTemp, roadidTemp);
 			}
+			BufferedWriter csvWtriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(exportDataPath+File.separator+"gd_filter_data_"+PBStringUtil.GetDateString("yyyyMMddHHmmss", new Date())+".csv"), charSet), 10240);
+			logger.info("filter gddata start ......!");
 			for (File fileTemp : result) {
-				String zipFileName = PBFileUtil.GetFileName(fileTemp.getPath());
 				List<GDData> resultList = new ArrayList<GDData>();
-				BufferedWriter csvWtriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(exportDataPath+File.separator+"gd_filter_data_"+zipFileName+"_"+PBStringUtil.GetDateString("yyyyMMddHHmmss", new Date())+".csv"), charSet), 10240);
-				ZipFile zf = new ZipFile(fileTemp);
-				InputStream in = new BufferedInputStream(new FileInputStream(fileTemp));
-				ZipInputStream zin = new ZipInputStream(in);
-				ZipEntry ze;
-				while ((ze = zin.getNextEntry()) != null) {
-					if (!ze.isDirectory()) {
-						long size = ze.getSize();
-						if (size > 0) {
-							BufferedReader br = new BufferedReader(new InputStreamReader(zf.getInputStream(ze),charSet));
-							String line;
-							String fileNameTemp = ze.getName();
-							String subFileNameTemp = fileNameTemp.substring(fileNameTemp.lastIndexOf("/")+1);
-							while ((line = br.readLine()) != null) {
-								String[] arr = line.split(",");
-								if (null == arr || arr.length != 4) {
-									continue;
-								} else {
-									String roadid = arr[1];
-									if (null != mapGD.get(roadid)) {
-										GDData gdDataTemp = new GDData();
-										gdDataTemp.setBjTime(subFileNameTemp);
-										gdDataTemp.setLevel(arr[2]);
-										gdDataTemp.setRoadID(roadid);
-										gdDataTemp.setRoadName(arr[0]);
-										gdDataTemp.setSpeed(arr[3]);
-										resultList.add(gdDataTemp);
+				if(fileTemp.getAbsolutePath().lastIndexOf(".zip")!=-1) {
+					ZipFile zf = new ZipFile(fileTemp);
+					InputStream in = new BufferedInputStream(new FileInputStream(fileTemp));
+					ZipInputStream zin = new ZipInputStream(in);
+					ZipEntry ze;
+					while ((ze = zin.getNextEntry()) != null) {
+						if (!ze.isDirectory()) {
+							long size = ze.getSize();
+							if (size > 0) {
+								BufferedReader br = new BufferedReader(new InputStreamReader(zf.getInputStream(ze),charSet));
+								String line;
+								String fileNameTemp = ze.getName();
+								String subFileNameTemp = fileNameTemp.substring(fileNameTemp.lastIndexOf("/")+1);
+								while ((line = br.readLine()) != null) {
+									String[] arr = line.split(",");
+									if (null == arr || arr.length != 4) {
+										continue;
+									} else {
+										String roadid = arr[1];
+										if (null != mapGD.get(roadid)) {
+											GDData gdDataTemp = new GDData();
+											gdDataTemp.setBjTime(subFileNameTemp);
+											gdDataTemp.setLevel(arr[2]);
+											gdDataTemp.setRoadID(roadid);
+											gdDataTemp.setRoadName(arr[0]);
+											gdDataTemp.setSpeed(arr[3]);
+											resultList.add(gdDataTemp);
+										}
 									}
 								}
+								br.close();
 							}
-							br.close();
 						}
 					}
+					zin.closeEntry();
+					zin.close();
+					in.close();
+					zf.close();
+				}else {
+					List<String> list = PBFileUtil.ReadFileByLine(fileTemp.getAbsolutePath(),"UTF-8");
+					for(String str : list){
+	                    String[] arr = str.split(",");
+	                    if(null==arr||arr.length!=4){
+	                        continue;
+	                    }else{
+	                        String roadid = arr[1];
+	                        if(null!=mapGD.get(roadid.trim())){
+	                        	GDData gdDataTemp = new GDData();
+								gdDataTemp.setBjTime(fileTemp.getName());
+								gdDataTemp.setLevel(arr[2]);
+								gdDataTemp.setRoadID(roadid);
+								gdDataTemp.setRoadName(arr[0]);
+								gdDataTemp.setSpeed(arr[3]);
+								resultList.add(gdDataTemp);
+	                        }
+	                    }
+	                }
 				}
-				zin.closeEntry();
-				zin.close();
-				in.close();
-				zf.close();
-				Collections.sort(resultList);
 				PBPOIExcelUtil.WriteRow(resultList, csvWtriter);
 				csvWtriter.flush();
-				csvWtriter.close();
+				logger.info("filter gddata file--"+fileTemp.getAbsolutePath());
 			}
+			csvWtriter.flush();
+			csvWtriter.close();
+			logger.info("filter gddata completed!");
 		} catch (ZipException e) {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
@@ -144,7 +167,5 @@ public class GDDataFilterServiceImpl implements GDDataFilterService {
 	public void setCharSet(String charSet) {
 		this.charSet = charSet;
 	}
-
-	
 	
 }

@@ -48,7 +48,7 @@ group = 'com.promisepb.tools'
 uploadArchives {
  repositories {
      mavenDeployer {
-         repository(url: uri('F:\\mavenrepo\\repository'))
+         repository(url: uri('E:\\mavenrepo\\repository'))
      }
  }
 }
