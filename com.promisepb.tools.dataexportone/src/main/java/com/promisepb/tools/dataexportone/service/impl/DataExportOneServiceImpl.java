@@ -43,10 +43,14 @@ public class DataExportOneServiceImpl implements DataExportOneService {
 	private String endTime;
 	private int pageSize;
 	private int dayStep;
+	private String fileWriteMode;
 	@Override
 	public void exportDataFile() {
 		try {
+			logger.info(dsc.getJdbcURL()+"**"+ dsc.getUserName()+"**"+ dsc.getPasswd());
 			Connection connection  = PBDBConnection.GetOracleConnection(dsc.getJdbcURL(), dsc.getUserName(), dsc.getPasswd());
+			List<String> sqlList = new ArrayList<String>();
+			int sqlListIndex=0;
 			if(null!=connection) {
 				logger.info("init dbConnection success !");
 				if(null!=startTime&&null!=endTime) {
@@ -56,13 +60,28 @@ public class DataExportOneServiceImpl implements DataExportOneService {
 						String d2 = dateList.get(i+1);
 						String exeSQL = sql.replace("#D1",d1).replace("#D2", d2);
 						logger.info(exeSQL);
-						PBPOIExcelUtil.ExportCSVBySQL(exeSQL, connection, exportPath+File.separator+d1+suffixContent+".csv", pageSize,"UTF-8");
-						logger.info("export data success!");
+						if(fileWriteMode.trim().toLowerCase().equals("append")) {
+							sqlList.add(sqlListIndex, exeSQL);
+							sqlListIndex++;
+						}else {
+							PBPOIExcelUtil.ExportCSVBySQL(exeSQL, connection, exportPath+File.separator+d1+suffixContent+".csv", pageSize,"UTF-8");
+							logger.info("export data success!");
+						}
 					}
 				}else {
-					PBPOIExcelUtil.ExportCSVBySQL(sql, connection, exportPath+File.separator+format.format(new Date())+suffixContent+".csv", pageSize,"UTF-8");
-					logger.info("export data success!");
+					if(fileWriteMode.trim().toLowerCase().equals("append")) {
+						sqlList.add(sqlListIndex, sql);
+						sqlListIndex++;
+					}else {
+						PBPOIExcelUtil.ExportCSVBySQL(sql, connection, exportPath+File.separator+format.format(new Date())+suffixContent+".csv", pageSize,"UTF-8");
+						logger.info("export data success!");
+					}
+					
 				}
+				if(null!=sqlList&&sqlList.size()>0) {
+					PBPOIExcelUtil.ExportCSVBySQLList(sqlList, connection, exportPath+File.separator+format.format(new Date())+suffixContent+".csv", pageSize, "UTF-8");
+				}
+				
 				PBDBConnection.CloseConnection(connection);
 				PBMailUtil.SendEmailText(ec.getSendEmailProps(), ec.getSendMail(), ec.getErrorMails(), null, null, emailTitle+"-"+format.format(new Date()),emailContent);
 			}else {
@@ -194,6 +213,14 @@ public class DataExportOneServiceImpl implements DataExportOneService {
 
 	public void setDayStep(int dayStep) {
 		this.dayStep = dayStep;
+	}
+
+	public String getFileWriteMode() {
+		return fileWriteMode;
+	}
+
+	public void setFileWriteMode(String fileWriteMode) {
+		this.fileWriteMode = fileWriteMode;
 	}
 	
 	

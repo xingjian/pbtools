@@ -49,11 +49,11 @@ task createJavaProject  {
 
 //上传jar到本地maven库
 apply plugin: 'maven'
-group = 'com.promisepb.utils'
+group = 'com.promisepb.tools'
 uploadArchives {
  repositories {
      mavenDeployer {
-         repository(url: uri('F:\\mavenrepo\\repository'))
+         repository(url: uri('E:\\mavenrepo\\repository'))
      }
  }
 }

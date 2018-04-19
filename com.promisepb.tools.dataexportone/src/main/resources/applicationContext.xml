@@ -16,7 +16,7 @@
      <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:config-park-etcp.properties</value>
+				<value>classpath:config-swroad.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -46,5 +46,6 @@
      	<property name="endTime"  value="${d2}" />
      	<property name="pageSize"  value="${pageSize}" />
      	<property name="dayStep"   value="${dayStep}" />
+     	<property name="fileWriteMode"   value="${fileWriteMode}" />
 	</bean>
 </beans>
