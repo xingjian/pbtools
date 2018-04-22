@@ -19,7 +19,11 @@ public class DailyMain {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ApplicationContext ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
+		if(null!=args&&args.length==1) {
+			ApplicationContext ac = new FileSystemXmlApplicationContext("classpath:applicationContext-"+args[0]+".xml");
+		}else {
+			ApplicationContext ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
+		}
 	}
 
 }

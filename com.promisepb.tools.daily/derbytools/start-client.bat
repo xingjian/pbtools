@@ -1,0 +1,1 @@
+java -classpath derbytools-10.14.1.0.jar;derbyclient-10.14.1.0.jar;derby-10.14.1.0.jar;derbynet-10.14.1.0.jar org.apache.derby.tools.ij
