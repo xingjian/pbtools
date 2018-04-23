@@ -87,7 +87,7 @@ public class TOCCZTYXQKExtractServiceImpl implements TOCCZTYXQKExtractService {
             result = rs.next();
             rs.close();
         } catch (SQLException e) {  
-        	logger.info("检查表是否存在出现sql异常",e);  
+        	logger.info("检查表是否存在出现sql异常",e); 
         }  
         return result;  
     } 
