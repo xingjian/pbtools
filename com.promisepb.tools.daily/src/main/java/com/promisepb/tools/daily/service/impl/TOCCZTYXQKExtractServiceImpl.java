@@ -43,18 +43,21 @@ public class TOCCZTYXQKExtractServiceImpl implements TOCCZTYXQKExtractService {
 	public void startWeatherMessageExtract() {
 		initDerbyDB();
 		try {
-//			FTPUtil.InitFTPClient(this.ftpIP, this.ftpPort, this.ftpUserName, this.ftpPasswd, this.ftpControlEncoding);
-//			List<FTPFileInfo> listFTPFileInfo = FTPUtil.ListFiles(ftpZTYXQKDir);
-//			FTPUtil.CloseFTPClient();
+			FTPUtil.InitFTPClient(this.ftpIP, this.ftpPort, this.ftpUserName, this.ftpPasswd, this.ftpControlEncoding);
+			List<FTPFileInfo> listFTPFileInfo = FTPUtil.ListFiles(ftpZTYXQKDir);
+			for(FTPFileInfo ftpFileTemp : listFTPFileInfo) {
+				System.out.println(ftpFileTemp.getName());
+			}
+			FTPUtil.CloseFTPClient();
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 	}
 	public void initDerbyDB() {
 		try {
 			Connection connection = derbyDS.getConnection();
-			boolean boo = isTableExist(connection,"tocc_zyyxqk_record");
+			boolean boo = isTableExist(connection,"TOCC_ZYYXQK_RECORD");
 			if(!boo) {
 				createTables(connection);
 			}else {
